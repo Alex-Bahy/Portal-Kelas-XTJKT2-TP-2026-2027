@@ -109,7 +109,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--ink);color:var(--te
 .hero-art{
   position:absolute;inset:0;pointer-events:none;overflow:hidden;
 }
-/* Large decorative circuit node rings */
 .ring{
   position:absolute;border-radius:50%;
   border:1px solid rgba(0,212,255,.12);
@@ -118,7 +117,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--ink);color:var(--te
 .ring1{width:500px;height:500px;top:-120px;right:-100px;border-color:rgba(0,212,255,.1);animation-duration:32s;}
 .ring2{width:340px;height:340px;top:-50px;right:60px;border-color:rgba(5,255,158,.1);animation-direction:reverse;animation-duration:22s;}
 .ring3{width:200px;height:200px;top:40px;right:170px;border-color:rgba(255,184,0,.12);animation-duration:16s;}
-/* Node dots on rings */
 .ring::after{
   content:'';position:absolute;
   width:6px;height:6px;border-radius:50%;
@@ -129,7 +127,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--ink);color:var(--te
 .ring2::after{background:var(--electric);}
 .ring3::after{background:var(--amber);}
 @keyframes spinRing{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-/* Diagonal beam */
 .hero-beam{
   position:absolute;
   top:0;right:200px;
@@ -138,7 +135,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--ink);color:var(--te
   transform:rotate(-15deg);transform-origin:top center;
 }
 .hero-beam2{right:350px;background:linear-gradient(to bottom,transparent,rgba(5,255,158,.12),transparent);transform:rotate(-8deg);}
-/* Glow blob */
 .hero-glow{
   position:absolute;
   top:10%;right:5%;
@@ -148,7 +144,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--ink);color:var(--te
 }
 @keyframes glowPulse{0%,100%{opacity:.7;transform:scale(1);}50%{opacity:1;transform:scale(1.1);}}
 
-/* Scanline effect at bottom */
 .hero::after{
   content:'';position:absolute;bottom:0;left:0;right:0;height:60px;
   background:linear-gradient(to bottom,transparent,rgba(0,212,255,.04));
@@ -210,7 +205,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--ink);color:var(--te
 }
 @keyframes fadeSlideIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
 
-/* Stats bar */
 .stats{
   display:inline-flex;
   background:rgba(0,212,255,.07);
@@ -234,7 +228,6 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--ink);color:var(--te
 .stat-n.a{color:var(--amber);}
 .stat-l{font-size:9.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;}
 
-/* Wave divider */
 .wave-wrap{position:relative;z-index:3;line-height:0;margin-top:-2px;}
 .wave-wrap svg{display:block;width:100%;}
 
@@ -244,7 +237,6 @@ main{position:relative;z-index:1;}
 .sec{padding:clamp(44px,5vw,72px) 0 0;}
 .sec-last{padding-bottom:clamp(64px,7vw,96px);}
 
-/* Section header */
 .sec-head{margin-bottom:clamp(22px,3vw,36px);}
 .sec-tag{
   display:inline-flex;align-items:center;gap:7px;
@@ -282,7 +274,6 @@ main{position:relative;z-index:1;}
     radial-gradient(ellipse 50% 80% at 100% 50%,rgba(0,212,255,.1) 0%,transparent 60%),
     radial-gradient(ellipse 30% 40% at 0% 0%,rgba(5,255,158,.06) 0%,transparent 50%);
 }
-/* Animated border shimmer */
 .data-hero::after{
   content:'';position:absolute;top:0;left:-100%;width:50%;height:1px;
   background:linear-gradient(90deg,transparent,var(--cyan),transparent);
@@ -341,6 +332,7 @@ main{position:relative;z-index:1;}
   box-shadow:0 4px 20px rgba(0,212,255,.25);
 }
 .btn-data:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,212,255,.4);filter:brightness(1.05);}
+.btn-data svg{width:14px;height:14px;}
 @media(max-width:580px){.data-hero{grid-template-columns:1fr;}.data-hero-visual{display:none;}}
 
 /* ── GROUP DIVIDER ── */
@@ -377,8 +369,6 @@ main{position:relative;z-index:1;}
   transform:translateY(-4px);
   box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 1px var(--border2);
 }
-
-/* accent top line with glow */
 .subj-card::after{
   content:'';position:absolute;top:0;left:0;right:0;height:2.5px;
   transition:opacity .3s;
@@ -387,7 +377,6 @@ main{position:relative;z-index:1;}
 .card-k::after{background:linear-gradient(90deg,var(--electric),var(--electric2));box-shadow:0 0 10px rgba(5,255,158,.3);}
 .card-l::after{background:linear-gradient(90deg,var(--amber),var(--amber2));box-shadow:0 0 10px rgba(255,184,0,.3);}
 
-/* Grid overlay on card bg */
 .subj-card::before{
   content:'';position:absolute;inset:0;pointer-events:none;
   background-image:
@@ -626,13 +615,11 @@ footer strong{color:var(--muted2);}
 footer .code{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);opacity:.5;}
 footer .divider{width:44px;height:1px;background:var(--border);margin:12px auto;}
 
-/* Touch override */
 @media(hover:none){
   .card-edit-btn{opacity:1;}
   .subj-card:hover{transform:none;box-shadow:none;}
 }
 
-/* Card entrance */
 .subj-card{opacity:0;transform:translateY(20px);}
 </style>
 </head>
@@ -675,7 +662,7 @@ footer .divider{width:44px;height:1px;background:var(--border);margin:12px auto;
         <span>SMK · Portal Akademik Guru</span>
       </div>
     </div>
-    <div class="nav-badge">TP&nbsp;2025/2026</div>
+    <div class="nav-badge">TP&nbsp;2026/2027</div>
   </nav>
 
   <div class="hero-art">
@@ -722,7 +709,7 @@ footer .divider{width:44px;height:1px;background:var(--border);margin:12px auto;
     <div class="data-hero">
       <div class="data-hero-text">
         <div class="data-hero-badge">🔐 Input Data — Wali Kelas</div>
-        <div class="data-hero-title">Database Siswa<br><span>X TJKT 2</span> / 2025–2026</div>
+        <div class="data-hero-title">Database Siswa<br><span>X TJKT 2</span> 2026/2027</div>
         <div class="data-hero-sub">Wali Kelas dapat menginput dan memperbarui data lengkap seluruh siswa — termasuk profil, NIS, NISN, JK, Agama, dan keterangan lainnya.</div>
         <div class="data-hero-actions">
           <button class="btn-data" onclick="openModal()">
@@ -778,29 +765,29 @@ footer .divider{width:44px;height:1px;background:var(--border);margin:12px auto;
 <footer>
   <strong>X Teknik Jaringan Komputer &amp; Telekomunikasi 2</strong>
   <div class="divider"></div>
-  Portal Akademik Guru · Tahun Pelajaran 2025/2026<br>
+  Portal Akademik Guru · Tahun Pelajaran 2026/2027<br>
   <span class="code">// input_nilai → semua_guru · data_siswa → wali_kelas_only</span>
 </footer>
 
 <script>
 const PASS = 'SMKBisa';
-const DATA_URL = 'https://alex-bahy.github.io/Data-siswa-XTJKT2-2026/';
-const SK = 'xtjkt2_mapel_links_v1';
+const DATA_URL = 'https://alex-bahy.github.io/Data-siswa-XTJKT2-TP-2026-2027/';
+const SK = 'xtjkt2_mapel_links_v2';
 
 const DEFAULTS = {
-  '01': 'https://alex-bahy.github.io/Agama-XTJKT2-2026/',
-  '02': 'https://alex-bahy.github.io/Pend.-Pancasila-XTJKT2-2026/',
-  '03': 'https://alex-bahy.github.io/B.-Indonesia-XTJKT2-2026/',
-  '04': 'https://alex-bahy.github.io/PJOK-XTJKT2-2026/',
-  '05': 'https://alex-bahy.github.io/Sejarah-XTJKT2-2026/',
-  '06': 'https://alex-bahy.github.io/Seni-Budaya-XTJKT2-2026/',
-  '07': 'https://alex-bahy.github.io/Matematika-XTJKT2-2026/',
-  '08': 'https://alex-bahy.github.io/B.-Inggris-XTJKT2-2026/',
-  '09': 'https://alex-bahy.github.io/Informatika-XTJKT2-2026/',
-  '10': 'https://alex-bahy.github.io/Projek-IPAS-XTJKT2-2026/',
-  '11': 'https://alex-bahy.github.io/Dasar-Program-Keahlian-XTJKT2-2026/',
-  '12': 'https://alex-bahy.github.io/Muatan-Lokal-XTJKT2-2026/',
-  'L1': 'https://alex-bahy.github.io/Ledger-XTJKT2-2026/',
+  '01': 'https://alex-bahy.github.io/DN-Pend.-Agama-XTJKT2-ganjil-TP-2026-2027/',
+  '02': 'https://alex-bahy.github.io/DN-Pend.-Pancasila-XTJKT2-ganjil-TP-2026-2027/',
+  '03': 'https://alex-bahy.github.io/DN-B.-Indonesia-XTJKT2-ganjil-TP-2026-2027/',
+  '04': 'https://alex-bahy.github.io/DN-PJOK-XTJKT2-ganjil-TP-2026-2027/',
+  '05': 'https://alex-bahy.github.io/DN-Sejarah-XTJKT2-ganjil-TP-2026-2027/',
+  '06': 'https://alex-bahy.github.io/DN-Seni-Budaya-XTJKT2-ganjil-TP-2026-2027/',
+  '07': 'https://alex-bahy.github.io/DN-Matematika-XTJKT2-ganjil-TP-2026-2027/',
+  '08': 'https://alex-bahy.github.io/DN-B.-Inggris-XTJKT2-ganjil-TP-2026-2027/',
+  '09': 'https://alex-bahy.github.io/DN-Informatika-XTJKT2-ganjil-TP-2026-2027/',
+  '10': 'https://alex-bahy.github.io/DN-Projek-IPAS-XTJTK2-ganjil-TP-2026-2027/',
+  '11': 'https://alex-bahy.github.io/DN-Dasar-Program-Keahlian-XTJKT2-ganjil-TP-2026-2027/',
+  '12': 'https://alex-bahy.github.io/DN-Muatan-Lokal-XTJKT2-ganjil-TP-2026-2027/',
+  'L1': 'https://alex-bahy.github.io/Ledger-XTJKT2-ganjil-TP-2026-2027/',
 };
 
 const SUBJECTS = {
